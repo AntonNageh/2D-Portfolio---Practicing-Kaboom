@@ -1,0 +1,8 @@
+#app {
+  height: 0rem !important;
+}
+#textbox-container {
+  margin-top: 45%;
+  width: 80rem !important;
+  position: absolute !important;
+}
