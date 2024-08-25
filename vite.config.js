@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 const manifestForPlugIn = {
   registerType:'prompt',
-  includeAssests:['favicon.ico', "apple-touc-icon.png", "masked-icon.svg"],
+  includeAssests:['favicon.ico', "apple-touc-icon.png"],
   manifest:{
     name:"React-vite-app",
     short_name:"react-vite-app",
@@ -27,17 +27,24 @@ const manifestForPlugIn = {
     },
 
   ],
-  theme_color:'#171717',
+  theme_color:'#FFFFFF',
   background_color:'#f0e7db',
   display:"standalone",
   scope:'/',
-  start_url:"/",
+  "start_url": "/index.html",
   orientation:'portrait'
   }
 }
 export default defineConfig({
   base: "./",
-  plugins:[VitePWA(manifestForPlugIn)],
+  plugins: [
+    VitePWA({ 
+      registerType: 'autoUpdate',
+      devOptions: {
+        enabled: true
+      }
+    }, manifestForPlugIn)
+  ],
   build: {
     minify: "terser",
   },

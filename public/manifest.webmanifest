@@ -1,6 +1,7 @@
 {
-    "name":"",
-    "short_name":"",
+    "name":"2D portfolio",
+    "short_name":"2D portfolio",
+    "start_url":"./",
     "icons":[{
                 "src":"/android-chrome-192x192.png",
                 "sizes":"192x192",
