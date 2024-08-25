@@ -214,13 +214,13 @@ const App = () => {
 return (
   <div id="app">
   <div>
-        <p class="note">Tap/Click around to move</p>
+        <p className="note">Tap/Click around to move</p>
 
         <div id="textbox-container" style={{display: "none"}}>
           <div id="textbox">
-            <p id="dialogue" class="ui-text"></p>
-            <div class="btn-container">
-              <button id="close" class="ui-close-btn">Close</button>
+            <p id="dialogue" className="ui-text"></p>
+            <div className="btn-container">
+              <button id="close" className="ui-close-btn">Close</button>
             </div>
           </div>
         </div>
